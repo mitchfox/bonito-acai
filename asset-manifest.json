@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/bonito-acai/static/css/main.08955dd3.css",
-    "main.js": "/bonito-acai/static/js/main.fc9fd24c.js",
+    "main.css": "/bonito-acai/static/css/main.84b91cd8.css",
+    "main.js": "/bonito-acai/static/js/main.dc9d3280.js",
     "static/js/787.763501d6.chunk.js": "/bonito-acai/static/js/787.763501d6.chunk.js",
     "static/media/jedacai.mp4": "/bonito-acai/static/media/jedacai.3831ef7915bdcc64f4c4.mp4",
     "index.html": "/bonito-acai/index.html",
-    "main.08955dd3.css.map": "/bonito-acai/static/css/main.08955dd3.css.map",
-    "main.fc9fd24c.js.map": "/bonito-acai/static/js/main.fc9fd24c.js.map",
+    "static/media/logo.svg": "/bonito-acai/static/media/logo.3eefe598bcec0303d218d6768567985a.svg",
+    "main.84b91cd8.css.map": "/bonito-acai/static/css/main.84b91cd8.css.map",
+    "main.dc9d3280.js.map": "/bonito-acai/static/js/main.dc9d3280.js.map",
     "787.763501d6.chunk.js.map": "/bonito-acai/static/js/787.763501d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08955dd3.css",
-    "static/js/main.fc9fd24c.js"
+    "static/css/main.84b91cd8.css",
+    "static/js/main.dc9d3280.js"
   ]
 }
