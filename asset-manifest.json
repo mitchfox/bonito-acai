@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/acai-bonito/static/css/main.08955dd3.css",
-    "main.js": "/acai-bonito/static/js/main.f6c742a2.js",
-    "static/js/787.763501d6.chunk.js": "/acai-bonito/static/js/787.763501d6.chunk.js",
-    "static/media/jedacai.mp4": "/acai-bonito/static/media/jedacai.3831ef7915bdcc64f4c4.mp4",
-    "index.html": "/acai-bonito/index.html",
-    "main.08955dd3.css.map": "/acai-bonito/static/css/main.08955dd3.css.map",
-    "main.f6c742a2.js.map": "/acai-bonito/static/js/main.f6c742a2.js.map",
-    "787.763501d6.chunk.js.map": "/acai-bonito/static/js/787.763501d6.chunk.js.map"
+    "main.css": "/bonito-acai/static/css/main.08955dd3.css",
+    "main.js": "/bonito-acai/static/js/main.0ec3a2e9.js",
+    "static/js/787.763501d6.chunk.js": "/bonito-acai/static/js/787.763501d6.chunk.js",
+    "static/media/jedacai.mp4": "/bonito-acai/static/media/jedacai.3831ef7915bdcc64f4c4.mp4",
+    "index.html": "/bonito-acai/index.html",
+    "main.08955dd3.css.map": "/bonito-acai/static/css/main.08955dd3.css.map",
+    "main.0ec3a2e9.js.map": "/bonito-acai/static/js/main.0ec3a2e9.js.map",
+    "787.763501d6.chunk.js.map": "/bonito-acai/static/js/787.763501d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08955dd3.css",
-    "static/js/main.f6c742a2.js"
+    "static/js/main.0ec3a2e9.js"
   ]
 }
