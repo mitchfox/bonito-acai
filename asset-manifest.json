@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/bonito-acai/static/css/main.37a8e415.css",
-    "main.js": "/bonito-acai/static/js/main.509f6852.js",
+    "main.css": "/bonito-acai/static/css/main.ffc63f1d.css",
+    "main.js": "/bonito-acai/static/js/main.7ae353bc.js",
     "static/js/787.763501d6.chunk.js": "/bonito-acai/static/js/787.763501d6.chunk.js",
     "static/media/jedacai.mp4": "/bonito-acai/static/media/jedacai.3831ef7915bdcc64f4c4.mp4",
+    "static/media/insta.svg": "/bonito-acai/static/media/insta.3a1acb6e6cdaa4d269f46beeab549d85.svg",
     "static/media/Oliver-Regular.ttf": "/bonito-acai/static/media/Oliver-Regular.01f638784569ede86f7c.ttf",
+    "static/media/justeats.svg": "/bonito-acai/static/media/justeats.7280091c64be76f7ed4529b2acbc8de8.svg",
     "static/media/logo.svg": "/bonito-acai/static/media/logo.8f130254bd679a2d198f55479b94441a.svg",
     "index.html": "/bonito-acai/index.html",
-    "main.37a8e415.css.map": "/bonito-acai/static/css/main.37a8e415.css.map",
-    "main.509f6852.js.map": "/bonito-acai/static/js/main.509f6852.js.map",
+    "main.ffc63f1d.css.map": "/bonito-acai/static/css/main.ffc63f1d.css.map",
+    "main.7ae353bc.js.map": "/bonito-acai/static/js/main.7ae353bc.js.map",
     "787.763501d6.chunk.js.map": "/bonito-acai/static/js/787.763501d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37a8e415.css",
-    "static/js/main.509f6852.js"
+    "static/css/main.ffc63f1d.css",
+    "static/js/main.7ae353bc.js"
   ]
 }
