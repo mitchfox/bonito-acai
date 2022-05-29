@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 // Components
 import MenuItem from './MenuItem';
 
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -99,7 +100,7 @@ export default function BasicTabs() {
     return (
         <div>
             <div>
-                <Box sx={{ width: '100%', backgroundColor: '#423EC7',  }}>
+                <Box sx={{ width: '100%', backgroundColor: '#7D5AD3',  }}>
                     <StyledTabs
                         sx={{ width: '100%', fontFamily: 'Oliver' }}
                         value={value}

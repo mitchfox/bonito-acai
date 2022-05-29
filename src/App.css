@@ -14,6 +14,15 @@ font-family: 'Roboto', sans-serif;
   src: local('Oliver'), url(./Fonts/Oliver-Regular.ttf) format('truetype');
 }
 
+/* Text Styles */
+
+.text {
+margin: 0px;
+padding: 0px;
+color: #ffffff;
+
+}
+
 .logoContainer {
   text-align: center;
   min-width: 300px;
@@ -33,7 +42,7 @@ font-family: 'Roboto', sans-serif;
 .description {
   color: #ffffff;
   margin-top: -5px;
-  font-size: calc(13px + 0.5vw);
+  font-size: calc(12px + 0.5vw);
 }
 
 .videoContainer {
@@ -66,6 +75,22 @@ filter: brightness(45%);
 .menuContainer {
   margin-top: 100vh;
 }
+
+.buttonNav {
+  text-align: center;
+  /* Make video to at least 100% wide and tall */
+  min-width: 100vw; 
+  /* min-height: 100%;   */
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  /* Center the video */
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 
 
 

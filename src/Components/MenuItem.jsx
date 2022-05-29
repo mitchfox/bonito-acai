@@ -7,7 +7,7 @@ import '../Styles/MenuItem.css';
 
 
 // Simple Menu item component
-export default function RecipeReviewCard() {
+export default function MenuItem() {
 
 
     return (
