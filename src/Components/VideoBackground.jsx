@@ -2,6 +2,31 @@
 // import '../App.css';
 import Video from '../Assets/jedacai.mp4';
 
+
+import React, { useRef, useEffect } from "react"
+
+export default function VideoBackground(props) {
+  const videoRef = useRef(undefined);
+  useEffect(() => {
+    videoRef.current.defaultMuted = true;
+  })
+  return (
+    <div className='videoContainer'>
+      <video
+        ref={videoRef}
+        loop
+        autoPlay
+        muted
+        playsInline
+        // Check below doesn't fuck it up
+        className='jedVideo'>
+        <source src={Video} type="video/mp4" />
+      </video>
+    </div>
+  );
+}
+
+
 // function VideoBackground() {
 
 //   const videoRef = useRef(undefined);
@@ -29,24 +54,3 @@ import Video from '../Assets/jedacai.mp4';
 // }
 
 // export default VideoBackground;
-
-import React, { useRef, useEffect } from "react"
-
-export default function AutoPlaySilentVideo(props) {
-  const videoRef = useRef(undefined);
-  useEffect(() => {
-    videoRef.current.defaultMuted = true;
-  })
-  return (
-    <div className='videoContainer'>
-      <video
-        ref={videoRef}
-        loop
-        autoPlay
-        muted
-        playsInline>
-        <source src={Video} type="video/mp4" />
-      </video>
-    </div>
-  );
-}

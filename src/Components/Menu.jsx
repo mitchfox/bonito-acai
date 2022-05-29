@@ -4,9 +4,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 
+// Components
+import MenuItem from './MenuItem';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -41,6 +41,8 @@ function a11yProps(index) {
     };
 }
 
+
+
 export default function BasicTabs() {
     const [value, setValue] = React.useState(0);
 
@@ -51,38 +53,72 @@ export default function BasicTabs() {
     return (
         <div>
             <div>
-                    <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%' }}>
-                        <Tabs
-                            sx={{ width: '100%' }}
-                            centered
-                            value={value}
-                            variant="scrollable"
-                            onChange={handleChange}
-                            aria-label="scrollable tabs example"
-                        >
-                            <Tab label="Bowls" {...a11yProps(0)} />
-                            <Tab label="Food" {...a11yProps(1)} />
-                            <Tab label="Snacks" {...a11yProps(2)} />
-                            <Tab label="Smoothies" {...a11yProps(3)} />
-                            <Tab label="Juices" {...a11yProps(4)} />
-                            {/* <Tab label="" {...a11yProps(5)} /> */}
-                        </Tabs>
-                    </Box>
+                <Box sx={{ width: '100%' }}>
+                    <Tabs
+                        sx={{ width: '100%', fontFamily: 'Oliver' }}
+                        centered
+                        value={value}
+                        variant="scrollable"
+                        onChange={handleChange}
+                        aria-label="scrollable tabs example"
+                        TabIndicatorProps={
+                            { style: { background: 'red', opacity: 0 } }}
+                      
+                        // textColor={'info'}
+                        visibleScrollbar={false}
+                        
+                    >
+
+
+                        <Tab label="Bowls"
+                            sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
+                            }}{...a11yProps(0)}
+                        />
+                        <Tab label="Food" sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
+                            }}{...a11yProps(1)}
+                        />
+                        <Tab label="Snacks" sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
+                            }}{...a11yProps(2)}
+                        />
+                        <Tab label="Smoothies" sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
+                            }}{...a11yProps(3)}
+                        />
+                        <Tab label="Juices"sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
+                            }}{...a11yProps(4)}
+                        />
+                        {/* <Tab label="" {...a11yProps(5)} /> */}
+                    </Tabs>
+                </Box>
             </div>
 
             <div>
-                <Box sx={{ }}>
-                    <TabPanel value={value} index={0}>
-                        <ListItem>
-                            <ListItemText primary="Acai" secondary="Jan 7, 2014" />
+                <Box sx={{ backgroundColor: '#f1f1f1' }}>
+                    <TabPanel value={value} index={0} sx={{  }}>
+                        {/* <ListItem>
+                            <ListItemText primary="Acai" secondary="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
                             <ListItemText primary="£7" />
-                        </ListItem>
+                        </ListItem> */}
+
+                        <MenuItem />
+                        <MenuItem />
+
                     </TabPanel>
                     <TabPanel value={value} index={1}>
-                        Item Two
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
                     </TabPanel>
                     <TabPanel value={value} index={2}>
-                        Item Three
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
                     </TabPanel>
                     <TabPanel value={value} index={3}>
                         Item Four

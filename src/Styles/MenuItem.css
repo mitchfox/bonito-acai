@@ -1,0 +1,19 @@
+
+.itemName {
+    color: black;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.itemPrice {
+    color: black;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.itemDescription {
+    color: black;
+    margin-top: 0px;
+    font-size: 0.9em;
+}
+
