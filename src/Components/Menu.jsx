@@ -21,7 +21,7 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ paddingLeft: '25px', paddingRight: '25px'}}>
+                <Box sx={{ paddingLeft: '25px', paddingRight: '25px', marginLeft: '20px', marginRight: '20px' }}>
                     <Typography>{children}</Typography>
                 </Box>
             )}
@@ -45,6 +45,9 @@ function menuProps(index) {
 // Overriding Individual Tabs Theme
 const StyledTabs = styled((props) => (
     <Tabs
+        sx={{
+
+        }}
         {...props}
         TabIndicatorProps={{ style: { background: 'red', opacity: 0 } }}
     />
@@ -61,8 +64,14 @@ const StyledTabs = styled((props) => (
 });
 
 // Overriding Individual Tab Theme 
-const StyledTab = styled((props) => 
-<Tab disableRipple {...props} />)(
+const StyledTab = styled((props) =>
+    <Tab
+        disableRipple
+        {...props}
+        sx={{
+            fontFamily: 'Oliver', fontSize: '20px', padding: '25px', marginLeft: '20px', marginRight: '20px'
+        }} />
+)(
     ({ theme }) => ({
         // textTransform: 'none',
         // fontWeight: theme.typography.fontWeightRegular,
@@ -76,6 +85,7 @@ const StyledTab = styled((props) =>
             backgroundColor: 'rgba(100, 95, 228, 0.32)',
         },
     }),
+
 );
 
 
@@ -89,9 +99,9 @@ export default function BasicTabs() {
     return (
         <div>
             <div>
-                <Box sx={{ width: '100%', backgroundColor: '#423EC7'}}>
+                <Box sx={{ width: '100%', backgroundColor: '#423EC7',  }}>
                     <StyledTabs
-                        sx={{ width: '100%', fontFamily: 'Oliver',  }}
+                        sx={{ width: '100%', fontFamily: 'Oliver' }}
                         value={value}
                         variant="scrollable"
                         onChange={handleChange}
@@ -104,34 +114,19 @@ export default function BasicTabs() {
 
                     >
                         <StyledTab label="Bowls"
-                            disableRipple
-                            sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
-                            }}{...menuProps(0)}
+                            {...menuProps(0)}
                         />
                         <StyledTab label="Food"
-                            disableRipple
-                            sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
-                            }}{...menuProps(1)}
+                            {...menuProps(1)}
                         />
                         <StyledTab label="Snacks"
-                            disableRipple
-                            sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
-                            }}{...menuProps(2)}
+                            {...menuProps(2)}
                         />
                         <StyledTab label="Smoothies"
-                            disableRipple
-                            sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
-                            }}{...menuProps(3)}
+                            {...menuProps(3)}
                         />
                         <StyledTab label="Juices"
-                            disableRipple
-                            sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
-                            }}{...menuProps(4)}
+                            {...menuProps(4)}
                         />
                         {/* <Tab label="" {...a11yProps(5)} /> */}
                     </StyledTabs>
@@ -143,7 +138,7 @@ export default function BasicTabs() {
                 {/* Map the arrays of each menu catergory */}
                 <Box sx={{ backgroundColor: '#ffffff', marginTop: '25px' }}>
                     <TabPanel value={value} index={0} sx={{}}>
-              
+
 
                         <MenuItem />
                         <MenuItem />
@@ -166,7 +161,7 @@ export default function BasicTabs() {
                         <MenuItem />
                     </TabPanel>
                     <TabPanel value={value} index={3}>
-                    <MenuItem />
+                        <MenuItem />
                         <MenuItem />
                         <MenuItem />
                         <MenuItem />
@@ -176,7 +171,7 @@ export default function BasicTabs() {
                         <MenuItem />
                     </TabPanel>
                     <TabPanel value={value} index={4}>
-                    <MenuItem />
+                        <MenuItem />
                         <MenuItem />
                         <MenuItem />
                         <MenuItem />

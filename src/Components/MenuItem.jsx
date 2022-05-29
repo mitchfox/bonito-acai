@@ -11,8 +11,8 @@ export default function RecipeReviewCard() {
 
 
     return (
-            <div>
-                <Row className='itemContainer'>
+            <div className='itemContainer'>
+                <Row >
                     <Col span={10}>
                         <p className='itemName'>Acai Bowl</p>
                     </Col>
