@@ -2,8 +2,10 @@
 .homePage {
 width:100vw;
 height: 100%;
+overflow-x: hidden;
 /*  Update font family */
 font-family: 'Roboto', sans-serif;
+
 }
 
 /*  FONTS */
@@ -30,8 +32,8 @@ font-family: 'Roboto', sans-serif;
 
 .description {
   color: #ffffff;
-  margin-top: 0px;
-  font-size: calc(14px + 0.5vw);
+  margin-top: -5px;
+  font-size: calc(13px + 0.5vw);
 }
 
 .videoContainer {

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
+import { styled } from '@mui/material/styles';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -20,7 +21,7 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 6 }}>
+                <Box sx={{ paddingLeft: '25px', paddingRight: '25px'}}>
                     <Typography>{children}</Typography>
                 </Box>
             )}
@@ -34,13 +35,48 @@ TabPanel.propTypes = {
     value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index) {
+function menuProps(index) {
     return {
         id: `simple-tab-${index}`,
         'aria-controls': `simple-tabpanel-${index}`,
     };
 }
 
+// Overriding Individual Tabs Theme
+const StyledTabs = styled((props) => (
+    <Tabs
+        {...props}
+        TabIndicatorProps={{ style: { background: 'red', opacity: 0 } }}
+    />
+))({
+    '& .MuiTabs-indicator': {
+        display: 'flex',
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+    },
+    '& .MuiTabs-indicatorSpan': {
+        width: '100%',
+        backgroundColor: '#635ee7',
+    },
+});
+
+// Overriding Individual Tab Theme 
+const StyledTab = styled((props) => 
+<Tab disableRipple {...props} />)(
+    ({ theme }) => ({
+        // textTransform: 'none',
+        // fontWeight: theme.typography.fontWeightRegular,
+        // fontSize: theme.typography.pxToRem(15),
+        // marginRight: theme.spacing(1),
+        color: 'rgba(255, 255, 255, 0.4)',
+        '&.Mui-selected': {
+            color: '#fff',
+        },
+        '&.Mui-focusVisible': {
+            backgroundColor: 'rgba(100, 95, 228, 0.32)',
+        },
+    }),
+);
 
 
 export default function BasicTabs() {
@@ -53,57 +89,66 @@ export default function BasicTabs() {
     return (
         <div>
             <div>
-                <Box sx={{ width: '100%' }}>
-                    <Tabs
-                        sx={{ width: '100%', fontFamily: 'Oliver' }}
-                        centered
+                <Box sx={{ width: '100%', backgroundColor: '#423EC7'}}>
+                    <StyledTabs
+                        sx={{ width: '100%', fontFamily: 'Oliver',  }}
                         value={value}
                         variant="scrollable"
                         onChange={handleChange}
                         aria-label="scrollable tabs example"
                         TabIndicatorProps={
                             { style: { background: 'red', opacity: 0 } }}
-                      
+
                         // textColor={'info'}
                         visibleScrollbar={false}
-                        
+
                     >
-
-
-                        <Tab label="Bowls"
+                        <StyledTab label="Bowls"
+                            disableRipple
                             sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
-                            }}{...a11yProps(0)}
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
+                            }}{...menuProps(0)}
                         />
-                        <Tab label="Food" sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
-                            }}{...a11yProps(1)}
+                        <StyledTab label="Food"
+                            disableRipple
+                            sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
+                            }}{...menuProps(1)}
                         />
-                        <Tab label="Snacks" sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
-                            }}{...a11yProps(2)}
+                        <StyledTab label="Snacks"
+                            disableRipple
+                            sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
+                            }}{...menuProps(2)}
                         />
-                        <Tab label="Smoothies" sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
-                            }}{...a11yProps(3)}
+                        <StyledTab label="Smoothies"
+                            disableRipple
+                            sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
+                            }}{...menuProps(3)}
                         />
-                        <Tab label="Juices"sx={{
-                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px'
-                            }}{...a11yProps(4)}
+                        <StyledTab label="Juices"
+                            disableRipple
+                            sx={{
+                                fontFamily: 'Oliver', fontSize: '20px', padding: '25px', 
+                            }}{...menuProps(4)}
                         />
                         {/* <Tab label="" {...a11yProps(5)} /> */}
-                    </Tabs>
+                    </StyledTabs>
                 </Box>
             </div>
 
             <div>
-                <Box sx={{ backgroundColor: '#f1f1f1' }}>
-                    <TabPanel value={value} index={0} sx={{  }}>
-                        {/* <ListItem>
-                            <ListItemText primary="Acai" secondary="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-                            <ListItemText primary="£7" />
-                        </ListItem> */}
 
+                {/* Map the arrays of each menu catergory */}
+                <Box sx={{ backgroundColor: '#ffffff', marginTop: '25px' }}>
+                    <TabPanel value={value} index={0} sx={{}}>
+              
+
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
                         <MenuItem />
                         <MenuItem />
 
@@ -121,10 +166,24 @@ export default function BasicTabs() {
                         <MenuItem />
                     </TabPanel>
                     <TabPanel value={value} index={3}>
-                        Item Four
+                    <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
                     </TabPanel>
                     <TabPanel value={value} index={4}>
-                        Item Five
+                    <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
+                        <MenuItem />
                     </TabPanel>
                     {/* <TabPanel value={value} index={5}>
                     Item Six

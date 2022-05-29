@@ -1,22 +1,23 @@
 import * as React from 'react';
-
 import { Row, Col } from 'react-simple-flex-grid';
 import "react-simple-flex-grid/lib/main.css";
 
 // CSS
 import '../Styles/MenuItem.css';
 
+
+// Simple Menu item component
 export default function RecipeReviewCard() {
 
 
     return (
             <div>
-                <Row>
+                <Row className='itemContainer'>
                     <Col span={10}>
                         <p className='itemName'>Acai Bowl</p>
                     </Col>
                     <Col span={2}>
-                        <p className='itemPrice'>£7</p>
+                        <p className='itemPrice'>6</p>
                     </Col>
                 </Row>
 

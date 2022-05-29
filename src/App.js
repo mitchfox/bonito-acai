@@ -26,10 +26,10 @@ function App() {
 
       <VideoBackground />
       <div className='menuContainer'>
-      
+      <Menu />
       </div>
       <div style={{ width: "100vw", overflow: "auto" }}>
-        <Menu />
+        
       </div>
     
     </div>

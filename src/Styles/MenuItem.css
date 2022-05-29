@@ -1,19 +1,27 @@
+.itemContainer {
+    margin-top: 5px;
+}
 
 .itemName {
-    color: black;
+    color: #272727;
     margin-bottom: 5px;
     font-size: 1.2em;
+    font-family: 'Oliver', serif;
 }
 
 .itemPrice {
-    color: black;
+    color: #272727;
     margin-bottom: 5px;
     font-size: 1.2em;
+    float: right;
+    font-family: 'Oliver', serif;
 }
 
 .itemDescription {
-    color: black;
+    color: #727272;
     margin-top: 0px;
     font-size: 0.9em;
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
